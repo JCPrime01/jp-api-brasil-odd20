@@ -141,28 +141,36 @@ body::after {
   gap: 8px;
   flex: 1;
 }
-.team-logo {
-  width: 72px; height: 72px;
+.brazil-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.trophy-bounce {
+  font-size: 52px;
+  animation: trophy-bounce 0.9s ease-in-out infinite;
+  filter: drop-shadow(0 0 12px rgba(245,197,24,.7));
+}
+@keyframes trophy-bounce {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+.brazil-flag {
+  width: 80px; height: 80px;
   border-radius: 50%;
   background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.1);
+  border: 2px solid rgba(74,222,128,.4);
   display: flex; align-items: center; justify-content: center;
-  font-size: 42px;
+  font-size: 48px;
+  box-shadow: 0 0 20px rgba(74,222,128,.2);
 }
-.team-name {
-  font-size: 13px;
-  font-weight: 800;
-  text-align: center;
-  letter-spacing: .5px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.85);
-}
-.vs-text {
-  font-size: 22px;
+.brazil-name {
+  font-size: 20px;
   font-weight: 900;
-  color: rgba(255,255,255,.7);
-  letter-spacing: -1px;
-  flex-shrink: 0;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
 }
 .comp-row {
   padding: 10px 16px;
@@ -303,15 +311,11 @@ body::after {
 
   <div class="match-card">
     <div class="card-header">🏆 Copa do Mundo 2026</div>
-    <div class="teams-row">
-      <div class="team-side">
-        <div class="team-logo">🇧🇷</div>
-        <div class="team-name">Brasil</div>
-      </div>
-      <div class="vs-text">🏆</div>
-      <div class="team-side">
-        <div class="team-logo">🌍</div>
-        <div class="team-name">Campeão do Mundo</div>
+    <div class="teams-row" style="justify-content:center;">
+      <div class="brazil-center">
+        <div class="trophy-bounce">🏆</div>
+        <div class="brazil-flag">🇧🇷</div>
+        <div class="brazil-name">Brasil</div>
       </div>
     </div>
     <div class="comp-row">Copa do Mundo &nbsp;<span class="day-pill">2026</span></div>
