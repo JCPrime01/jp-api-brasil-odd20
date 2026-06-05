@@ -14,14 +14,14 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', 'SEU_PIXEL_ID');
+fbq('init', '1629271981642400');
 fbq('track', 'PageView');
 async function dispararLead(e) {
   e.preventDefault();
   const eventId = 'cr_' + Date.now();
   fbq('track', 'CompleteRegistration', { currency: 'BRL', value: 0 }, { eventID: eventId });
   try {
-    await fetch('SUA_URL_BACKEND/api/lead', {
+    await fetch('https://track-brasil-odd20-production.up.railway.app/api/lead', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -32,7 +32,7 @@ async function dispararLead(e) {
       })
     });
   } catch(err) {}
-  window.location.href = 'SUA_URL_AFILIADO';
+  window.location.href = 'https://ga.telegramdirect.cc/';
 }
 </script>
 <style>
